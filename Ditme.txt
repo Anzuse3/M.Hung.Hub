@@ -328,7 +328,7 @@ mainopens.Parent = mainopen
  Hub.Position = UDim2.new(0, 110, 0, 0)
  Hub.Size = UDim2.new(0, 81, 0, 27)
  Hub.Font = Enum.Font.Code
- Hub.Text = "| hype |"
+ Hub.Text = "| Hùng |"
  Hub.TextColor3 = Color3.fromRGB(0,255,0)
  Hub.TextSize = 16.000
  Hub.TextXAlignment = Enum.TextXAlignment.Left
@@ -3799,7 +3799,7 @@ end)
 
  
 --------------------------------------------------------------------
-local Library = Update:Window("Hasakine HUB ","")
+local Library = Update:Window("Đầu Buồi HUB ","")
 ------------------------------------------
 
 spawn(function()
@@ -4216,18 +4216,18 @@ spawn(function()
 end)
 
 --------------------------
-local Main = Library:Tab("Main","rbxassetid://11446825283")
-local Setting = Library:Tab("Settings","rbxassetid://11446835336")
-local Weapon = Library:Tab("Weapons","rbxassetid://11446859498")
+local Main = Library:Tab("Menu Chính","rbxassetid://11446825283")
+local Setting = Library:Tab("Cài Đặt","rbxassetid://11446835336")
+local Weapon = Library:Tab("Vũ Khí","rbxassetid://11446859498")
 local Race = Library:Tab("Race V4","rbxassetid://11446900930")
 local Stats = Library:Tab("Stats","rbxassetid://11447069304")
-local P = Library:Tab("Player","rbxassetid://11446900930")
-local Teleport = Library:Tab("Teleport","rbxassetid://11446920523")
-local Dungeon = Library:Tab("Dungeon","rbxassetid://11446957539")
-local DevilFruit = Library:Tab("Fruit+Esp","rbxassetid://11446965348")
+local P = Library:Tab("PVP","rbxassetid://11446900930")
+local Teleport = Library:Tab("Di Chuyển","rbxassetid://11446920523")
+local Dungeon = Library:Tab("Raid","rbxassetid://11446957539")
+local DevilFruit = Library:Tab("Trái Ắk Wỹ","rbxassetid://11446965348")
 local Shop = Library:Tab("Shop","rbxassetid://6031265976")
 local Misc = Library:Tab("Misc","rbxassetid://11447063791")
-local Op = Library:Tab("Status", "rbxassetid://7040410130")
+local Op = Library:Tab("Thông Tin", "rbxassetid://7040410130")
 --------------------------------------------------------------------
 
 Setting:Label("Join My Discord For More Info!")
@@ -6139,13 +6139,13 @@ local Mob_Kill_Cake_Prince = Weapon:Label("Total")
 				elseif string.len(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner")) == 86 then
 					Mob_Kill_Cake_Prince:Set("Kill : "..string.sub(game:GetService("ReplicatedStorage").Remotes.CommF_:InvokeServer("CakePrinceSpawner"),39,39).." : More")
 				else
-					Mob_Kill_Cake_Prince:Set("Boss Is Spawned")
+					Mob_Kill_Cake_Prince:Set("Đang Spawn")
 				end
 			end)
 		end
 	end)
 
-Weapon:Toggle("Auto Cake Prince",_G.Auto_Cake_Prince,function(value)
+Weapon:Toggle("Farm Kata",_G.Auto_Cake_Prince,function(value)
  _G.Auto_Cake_Prince = value
 StopTween(_G.Auto_Cake_Prince)
 end)
@@ -10886,7 +10886,7 @@ local x2Code = {
     end)
 
 
-Misc:Seperator(" Player Misc ")
+Misc:Seperator(" Misc Người Chơi ")
     
     
     Misc:Dropdown("Select Haki State",{"State 0","State 1","State 2","State 3","State 4","State 5"},function(value)
@@ -11151,7 +11151,7 @@ Op:Label("Level : "..game.Players.localPlayer.Data.Level.Value)
 
 Op:Label("Bounty : "..game:GetService("Players").LocalPlayer.leaderstats["Bounty/Honor"].Value)
 
-Op:Seperator("\\\\\  Sword  //")
+Op:Seperator("\\\\\  Kiếm  //")
 
 local Saber = Op:Label("❌: Saber")
 local Rengoku = Op:Label("❌: Rengoku")
@@ -11211,7 +11211,7 @@ spawn(function()
     end
 end)
 
-Op:Seperator("\\\\\  Quest  //")
+Op:Seperator("\\\\\  Nhiệm Vụ  //")
 
 local Bartilo_Quest = Op:Label("❌: Bartilo Quest")
 local Don_Swan_Quest = Op:Label("❌: Don Swan Quest")
@@ -11235,7 +11235,7 @@ spawn(function()
     end
 end)
 
-Op:Seperator("\\\\\  Sword Legendary  //")
+Op:Seperator("\\\\\  Kiếm Legendary  //")
 
 local Shisui = Op:Label("❌: Shisui")
 local Saddi = Op:Label("❌: Saddi")
@@ -11292,7 +11292,7 @@ spawn(function()
     end
 end)
 
-Op:Seperator("\\\\\  Gun  //")
+Op:Seperator("\\\\\  Súng  //")
 
 local Kabu_cha = Op:Label("❌: Kabucha")
 local Acidum_Rifle = Op:Label("❌: Acidum Rifle")
@@ -11318,7 +11318,7 @@ end)
 
 
 
-Op:Seperator("\\\\\  Accessory  //")
+Op:Seperator("\\\\\  Trang Bị  //")
 
 local Dark_Coat = Op:Label("❌: Dark Coat")
 local Ghoul_Mask = Op:Label("❌: Ghoul Mask")
